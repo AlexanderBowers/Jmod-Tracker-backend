@@ -1,2 +1,0 @@
-class JmodsController < ApplicationController
-end

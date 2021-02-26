@@ -1,2 +1,0 @@
-class Jmod < ApplicationRecord
-end
