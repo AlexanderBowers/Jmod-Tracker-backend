@@ -4,6 +4,7 @@ require 'net/https'
 require "base64"
 require 'json'
 require "webrick"
+require "httparty"
 
 class Search < ApplicationRecord
     TWITTER_BEARER_KEY = ENV['twitter_bearer_key']
@@ -52,5 +53,14 @@ class Search < ApplicationRecord
         sock.verify_mode = OpenSSL::SSL::VERIFY_NONE
         res = sock.start {|http| http.request(req) }
         results_obj = JSON.parse(res.body)
+       
+    end
+
+    def self.get_reddit(name)
+        headers = {
+           "User-Agent" => "student project by /u/fuzzy_nugget"  
+        }
+        response = HTTParty.get("https://reddit.com/user/#{name}/comments.json", :headers => headers)
+        response.body
     end
 end

@@ -47,4 +47,6 @@ gem "active_model_serializers", "~> 0.10.12"
 
 gem "fake", "~> 1.42"
 
+gem "httparty"
+
 
