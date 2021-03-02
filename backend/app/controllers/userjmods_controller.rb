@@ -1,0 +1,2 @@
+class UserjmodsController < ApplicationController
+end

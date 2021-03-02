@@ -1,0 +1,2 @@
+class Jmod < ApplicationRecord
+end
