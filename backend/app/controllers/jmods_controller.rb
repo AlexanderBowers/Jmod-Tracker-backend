@@ -2,6 +2,7 @@ class JmodsController < ApplicationController
 
     def index
         jmods = Jmod.all 
+        render json: jmods
     end
 
     def create
