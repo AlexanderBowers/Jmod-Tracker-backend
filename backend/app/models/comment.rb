@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
   belongs_to :jmod
-  belongs_to :user, through: :jmod
+  has_many :usercomments
   validates :url, uniqueness: true
 end
