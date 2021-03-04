@@ -1,6 +1,5 @@
 class Tweet < ApplicationRecord
   belongs_to :jmod
-  belongs_to :userjmods, through: :jmods
-  belongs_to :users, through: :userjmods
+  has_many :usertweets
   validates :url, uniqueness: true
 end
