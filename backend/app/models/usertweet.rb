@@ -1,0 +1,2 @@
+class Usertweet < ApplicationRecord
+end

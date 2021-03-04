@@ -7395,3 +7395,869 @@ Processing by SearchesController#get_request as JSON
 Completed 200 OK in 455ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 3666)
 
 
+Started POST "/reddit" for ::1 at 2021-03-03 14:05:27 -0800
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SearchesController#get_reddit as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+Started POST "/reddit" for ::1 at 2021-03-03 14:05:27 -0800
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+Completed 200 OK in 439ms (Views: 1.1ms | ActiveRecord: 8.4ms | Allocations: 12121)
+
+
+Processing by SearchesController#get_reddit as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+Started POST "/search" for ::1 at 2021-03-03 14:05:28 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+Completed 200 OK in 431ms (Views: 1.2ms | ActiveRecord: 4.8ms | Allocations: 9843)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.34ms)
+Completed 200 OK in 476ms (Views: 3.5ms | ActiveRecord: 5.4ms | Allocations: 7865)
+
+
+Started POST "/reddit" for ::1 at 2021-03-03 14:05:28 -0800
+Processing by SearchesController#get_reddit as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+Completed 200 OK in 433ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 3099)
+
+
+Started POST "/search" for ::1 at 2021-03-03 14:08:42 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.31ms)
+Completed 200 OK in 434ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 3688)
+
+
+Started POST "/search" for ::1 at 2021-03-03 14:23:42 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.49ms)
+Completed 200 OK in 503ms (Views: 2.2ms | ActiveRecord: 6.8ms | Allocations: 5741)
+
+
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 15:17:05 -0800
+Started GET "/jmods" for ::1 at 2021-03-03 15:17:05 -0800
+Processing by JmodsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mJmod Load (1.6ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.98ms)
+Completed 200 OK in 154ms (Views: 19.0ms | ActiveRecord: 48.4ms | Allocations: 14929)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 202 Accepted in 166ms (Views: 2.1ms | ActiveRecord: 9.4ms | Allocations: 17940)
+
+
+Started POST "/search" for ::1 at 2021-03-03 15:17:09 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 434ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 3799)
+
+
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 15:17:26 -0800
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 202 Accepted in 6ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 2589)
+
+
+Started GET "/jmods" for ::1 at 2021-03-03 15:17:26 -0800
+Processing by JmodsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mJmod Load (1.1ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 1.7ms | Allocations: 2482)
+
+
+Started POST "/search" for ::1 at 2021-03-03 15:17:29 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 452ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 3662)
+
+
+Started POST "/tweets" for ::1 at 2021-03-03 15:17:32 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL
+...    tweet = Tweet.create((body: params[:body], url: params[:...
+...                          ^~~~~
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+...eate((body: params[:body], url: params[:url], jmod_id: param...
+...                           ^~~~
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+...y], url: params[:url], jmod_id: params[:jmod_id]))
+...                       ^~~~~~~~
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:11: syntax error, unexpected tIDENTIFIER, expecting ':'
+        response = {success: "Pin created. Ch...
+        ^~~~~~~~
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:12: syntax error, unexpected ':', expecting end
+        : response = {error: "Cannot c...
+        ^):
+  
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/controllers/tweets_controller.rb:11: syntax error, unexpected tIDENTIFIER, expecting ':'
+app/controllers/tweets_controller.rb:12: syntax error, unexpected ':', expecting end
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/controllers/tweets_controller.rb:11: syntax error, unexpected tIDENTIFIER, expecting ':'
+app/controllers/tweets_controller.rb:12: syntax error, unexpected ':', expecting end
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 15:18:24 -0800
+Started GET "/jmods" for ::1 at 2021-03-03 15:18:24 -0800
+Processing by JmodsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mJmod Load (1.0ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.64ms)
+Completed 202 Accepted in 39ms (Views: 4.4ms | ActiveRecord: 5.5ms | Allocations: 9317)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.55ms)
+Completed 200 OK in 77ms (Views: 40.8ms | ActiveRecord: 23.3ms | Allocations: 14388)
+
+
+Started POST "/search" for ::1 at 2021-03-03 15:18:25 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 449ms (Views: 1.3ms | ActiveRecord: 2.6ms | Allocations: 3804)
+
+
+Started POST "/tweets" for ::1 at 2021-03-03 15:18:29 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL
+...    tweet = Tweet.create((body: params[:body], url: params[:...
+...                          ^~~~~
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+...eate((body: params[:body], url: params[:url], jmod_id: param...
+...                           ^~~~
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+...y], url: params[:url], jmod_id: params[:jmod_id]))
+...                       ^~~~~~~~
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:11: syntax error, unexpected tIDENTIFIER, expecting ':'
+        response = {success: "Pin created. Ch...
+        ^~~~~~~~
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:12: syntax error, unexpected ':', expecting end
+        : response = {error: "Cannot c...
+        ^):
+  
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/controllers/tweets_controller.rb:11: syntax error, unexpected tIDENTIFIER, expecting ':'
+app/controllers/tweets_controller.rb:12: syntax error, unexpected ':', expecting end
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/controllers/tweets_controller.rb:11: syntax error, unexpected tIDENTIFIER, expecting ':'
+app/controllers/tweets_controller.rb:12: syntax error, unexpected ':', expecting end
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 15:19:02 -0800
+Started GET "/jmods" for ::1 at 2021-03-03 15:19:02 -0800
+Processing by JmodsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJmod Load (2.4ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.36ms)
+Completed 202 Accepted in 25ms (Views: 3.5ms | ActiveRecord: 13.7ms | Allocations: 8797)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 200 OK in 47ms (Views: 13.8ms | ActiveRecord: 17.4ms | Allocations: 14392)
+
+
+Started POST "/search" for ::1 at 2021-03-03 15:20:13 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 433ms (Views: 1.3ms | ActiveRecord: 1.2ms | Allocations: 3790)
+
+
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 15:23:04 -0800
+Started GET "/jmods" for ::1 at 2021-03-03 15:23:04 -0800
+Processing by JmodsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mJmod Load (0.5ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.9ms | Allocations: 4608)
+
+
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 202 Accepted in 12ms (Views: 2.5ms | ActiveRecord: 0.7ms | Allocations: 5098)
+
+
+Started POST "/search" for ::1 at 2021-03-03 15:23:06 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 433ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 3666)
+
+
+Started POST "/tweets" for ::1 at 2021-03-03 15:47:47 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL
+...    tweet = Tweet.create((body: params[:body], url: params[:...
+...                          ^~~~~
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+...eate((body: params[:body], url: params[:url], jmod_id: param...
+...                           ^~~~
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+...y], url: params[:url], jmod_id: params[:jmod_id])) &&
+...                       ^~~~~~~~):
+  
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/controllers/tweets_controller.rb:10: syntax error, unexpected tLABEL, expecting '='
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 15:48:55 -0800
+Started GET "/jmods" for ::1 at 2021-03-03 15:48:55 -0800
+Processing by JmodsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mJmod Load (1.5ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 84ms (Views: 10.6ms | ActiveRecord: 10.8ms | Allocations: 13219)
+
+
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 202 Accepted in 131ms (Views: 2.5ms | ActiveRecord: 11.6ms | Allocations: 16231)
+
+
+Started POST "/search" for ::1 at 2021-03-03 15:48:57 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 437ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 3801)
+
+
+Started POST "/tweets" for ::1 at 2021-03-03 15:48:59 -0800
+  
+ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :primary_key, :foreign_key, :dependent, :validate, :inverse_of, :strict_loading, :autosave, :required, :touch, :polymorphic, :counter_cache, :optional, :default):
+  
+app/models/tweet.rb:3:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<main>'
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 15:49:27 -0800
+Started GET "/jmods" for ::1 at 2021-03-03 15:49:27 -0800
+Processing by JmodsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJmod Load (1.7ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 202 Accepted in 36ms (Views: 1.5ms | ActiveRecord: 20.1ms | Allocations: 9361)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.71ms)
+Completed 200 OK in 51ms (Views: 9.8ms | ActiveRecord: 24.9ms | Allocations: 14461)
+
+
+Started POST "/search" for ::1 at 2021-03-03 15:49:29 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 200 OK in 474ms (Views: 1.3ms | ActiveRecord: 1.3ms | Allocations: 3798)
+
+
+Started POST "/tweets" for ::1 at 2021-03-03 15:49:32 -0800
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/models/tweet.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+  belongs_to :user, through :jmod
+                            ^):
+  
+app/models/tweet.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/tweet.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+Started GET "/jmods" for ::1 at 2021-03-03 16:03:07 -0800
+Processing by JmodsController#index as */*
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 16:03:07 -0800
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mJmod Load (1.5ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.67ms)
+Completed 200 OK in 105ms (Views: 11.6ms | ActiveRecord: 9.4ms | Allocations: 13740)
+
+
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 202 Accepted in 24ms (Views: 1.9ms | ActiveRecord: 9.1ms | Allocations: 7829)
+
+
+Started POST "/search" for ::1 at 2021-03-03 16:03:11 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.28ms)
+Completed 200 OK in 446ms (Views: 2.9ms | ActiveRecord: 2.2ms | Allocations: 3811)
+
+
+Started POST "/reddit" for ::1 at 2021-03-03 16:03:13 -0800
+Processing by SearchesController#get_reddit as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+Completed 200 OK in 463ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 3126)
+
+
+Started POST "/search" for ::1 at 2021-03-03 16:03:14 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 424ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 3661)
+
+
+Started POST "/reddit" for ::1 at 2021-03-03 16:03:16 -0800
+Processing by SearchesController#get_reddit as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+Completed 200 OK in 604ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 3080)
+
+
+Started POST "/search" for ::1 at 2021-03-03 16:28:41 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.27ms)
+Completed 200 OK in 436ms (Views: 2.5ms | ActiveRecord: 8.1ms | Allocations: 8339)
+
+
+Started POST "/tweets" for ::1 at 2021-03-03 16:28:48 -0800
+  
+ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :primary_key, :foreign_key, :dependent, :validate, :inverse_of, :strict_loading, :autosave, :required, :touch, :polymorphic, :counter_cache, :optional, :default):
+  
+app/models/tweet.rb:3:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<main>'
+Started GET "/jmods" for ::1 at 2021-03-03 16:30:17 -0800
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 16:30:17 -0800
+Processing by JmodsController#index as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 448)
+
+
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/models/user.rb:5: syntax error, unexpected ':', expecting end
+    has_many :jmods, :through :userjmods
+                              ^
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/models/user.rb:6: syntax error, unexpected ':', expecting end
+...   has_many :tweets, :through :jmods
+...                              ^):
+  
+app/models/user.rb:5: syntax error, unexpected ':', expecting end
+app/models/user.rb:6: syntax error, unexpected ':', expecting end
+app/models/user.rb:5: syntax error, unexpected ':', expecting end
+app/models/user.rb:6: syntax error, unexpected ':', expecting end
+app/controllers/application_controller.rb:29:in `current_user'
+app/controllers/application_controller.rb:34:in `logged_in?'
+app/controllers/application_controller.rb:38:in `authorized'
+Processing by Api::V1::UsersController#profile as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 384)
+
+
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/models/user.rb:5: syntax error, unexpected ':', expecting end
+    has_many :jmods, :through :userjmods
+                              ^
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/models/user.rb:6: syntax error, unexpected ':', expecting end
+...   has_many :tweets, :through :jmods
+...                              ^):
+  
+app/models/user.rb:5: syntax error, unexpected ':', expecting end
+app/models/user.rb:6: syntax error, unexpected ':', expecting end
+app/models/user.rb:5: syntax error, unexpected ':', expecting end
+app/models/user.rb:6: syntax error, unexpected ':', expecting end
+app/controllers/application_controller.rb:29:in `current_user'
+app/controllers/application_controller.rb:34:in `logged_in?'
+app/controllers/application_controller.rb:38:in `authorized'
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 16:30:26 -0800
+Started GET "/jmods" for ::1 at 2021-03-03 16:30:26 -0800
+Processing by Api::V1::UsersController#profile as */*
+Processing by JmodsController#index as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 583)
+
+
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/models/user.rb:5: syntax error, unexpected ':', expecting end
+    has_many :jmods, :through :userjmods
+                              ^
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/models/user.rb:6: syntax error, unexpected ':', expecting end
+...   has_many :tweets, :through :jmods
+...                              ^):
+  
+app/models/user.rb:5: syntax error, unexpected ':', expecting end
+app/models/user.rb:6: syntax error, unexpected ':', expecting end
+app/models/user.rb:5: syntax error, unexpected ':', expecting end
+app/models/user.rb:6: syntax error, unexpected ':', expecting end
+app/controllers/application_controller.rb:29:in `current_user'
+app/controllers/application_controller.rb:34:in `logged_in?'
+app/controllers/application_controller.rb:38:in `authorized'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms | Allocations: 19362)
+
+
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/models/user.rb:5: syntax error, unexpected ':', expecting end
+    has_many :jmods, :through :userjmods
+                              ^
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/models/user.rb:6: syntax error, unexpected ':', expecting end
+...   has_many :tweets, :through :jmods
+...                              ^):
+  
+app/models/user.rb:5: syntax error, unexpected ':', expecting end
+app/models/user.rb:6: syntax error, unexpected ':', expecting end
+app/models/user.rb:5: syntax error, unexpected ':', expecting end
+app/models/user.rb:6: syntax error, unexpected ':', expecting end
+app/controllers/application_controller.rb:29:in `current_user'
+app/controllers/application_controller.rb:34:in `logged_in?'
+app/controllers/application_controller.rb:38:in `authorized'
+Started POST "//api/v1/login" for ::1 at 2021-03-03 16:30:48 -0800
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"username"=>"alex", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"alex", "password"=>"[FILTERED]"}}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 201)
+
+
+  
+SyntaxError (/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/models/user.rb:5: syntax error, unexpected ':', expecting end
+    has_many :jmods, :through :userjmods
+                              ^
+/mnt/c/Users/Alex/dev/flatiron/JmodTracker/Jmod-Tracker-backend/backend/app/models/user.rb:6: syntax error, unexpected ':', expecting end
+...   has_many :tweets, :through :jmods
+...                              ^):
+  
+app/models/user.rb:5: syntax error, unexpected ':', expecting end
+app/models/user.rb:6: syntax error, unexpected ':', expecting end
+app/models/user.rb:5: syntax error, unexpected ':', expecting end
+app/models/user.rb:6: syntax error, unexpected ':', expecting end
+app/controllers/api/v1/auth_controller.rb:5:in `create'
+Started POST "//api/v1/login" for ::1 at 2021-03-03 16:31:44 -0800
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"username"=>"alex", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"alex", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "alex"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 202 Accepted in 208ms (Views: 0.5ms | ActiveRecord: 11.4ms | Allocations: 6152)
+
+
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 16:31:44 -0800
+Started GET "/jmods" for ::1 at 2021-03-03 16:31:44 -0800
+Processing by Api::V1::UsersController#profile as */*
+Processing by JmodsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 202 Accepted in 8ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 3280)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mJmod Load (0.6ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.6ms)
+Completed 200 OK in 62ms (Views: 8.0ms | ActiveRecord: 9.6ms | Allocations: 12116)
+
+
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 16:32:23 -0800
+Started GET "/jmods" for ::1 at 2021-03-03 16:32:23 -0800
+Processing by JmodsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mJmod Load (0.8ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 202 Accepted in 22ms (Views: 3.3ms | ActiveRecord: 3.3ms | Allocations: 8803)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.6ms)
+Completed 200 OK in 36ms (Views: 11.8ms | ActiveRecord: 15.0ms | Allocations: 16104)
+
+
+Started POST "/search" for ::1 at 2021-03-03 16:32:25 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 442ms (Views: 1.3ms | ActiveRecord: 1.5ms | Allocations: 3798)
+
+
+Started POST "/tweets" for ::1 at 2021-03-03 16:32:28 -0800
+  
+ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :primary_key, :foreign_key, :dependent, :validate, :inverse_of, :strict_loading, :autosave, :required, :touch, :polymorphic, :counter_cache, :optional, :default):
+  
+app/models/tweet.rb:3:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<main>'
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 16:33:51 -0800
+Started GET "/jmods" for ::1 at 2021-03-03 16:33:51 -0800
+Processing by JmodsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJmod Load (11.8ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 202 Accepted in 29ms (Views: 2.2ms | ActiveRecord: 4.9ms | Allocations: 8762)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.75ms)
+Completed 200 OK in 50ms (Views: 11.5ms | ActiveRecord: 24.9ms | Allocations: 16094)
+
+
+Started POST "/search" for ::1 at 2021-03-03 16:33:53 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.31ms)
+Completed 200 OK in 429ms (Views: 1.6ms | ActiveRecord: 1.0ms | Allocations: 3798)
+
+
+Started POST "/tweets" for ::1 at 2021-03-03 16:33:55 -0800
+  
+ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :primary_key, :foreign_key, :dependent, :validate, :inverse_of, :strict_loading, :autosave, :required, :touch, :polymorphic, :counter_cache, :optional, :default):
+  
+app/models/tweet.rb:3:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<main>'
+Started POST "/tweets" for ::1 at 2021-03-03 16:51:23 -0800
+  
+ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :primary_key, :foreign_key, :dependent, :validate, :inverse_of, :strict_loading, :autosave, :required, :touch, :polymorphic, :counter_cache, :optional, :default):
+  
+app/models/tweet.rb:3:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<main>'
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 16:51:46 -0800
+Started GET "/jmods" for ::1 at 2021-03-03 16:51:46 -0800
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.31ms)
+Completed 202 Accepted in 117ms (Views: 2.0ms | ActiveRecord: 11.7ms | Allocations: 9745)
+
+
+Processing by JmodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mJmod Load (1.1ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.61ms)
+Completed 200 OK in 36ms (Views: 11.6ms | ActiveRecord: 12.0ms | Allocations: 12053)
+
+
+Started POST "/search" for ::1 at 2021-03-03 16:51:48 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.38ms)
+Completed 200 OK in 445ms (Views: 1.9ms | ActiveRecord: 1.5ms | Allocations: 3800)
+
+
+Started POST "/tweets" for ::1 at 2021-03-03 16:51:49 -0800
+  
+ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :primary_key, :foreign_key, :dependent, :validate, :inverse_of, :strict_loading, :autosave, :required, :touch, :polymorphic, :counter_cache, :optional, :default):
+  
+app/models/tweet.rb:3:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<main>'
+Started GET "/api/v1/profile" for ::1 at 2021-03-03 16:53:04 -0800
+Started GET "/jmods" for ::1 at 2021-03-03 16:53:04 -0800
+Processing by JmodsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mJmod Load (0.5ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods"[0m
+  ↳ app/controllers/jmods_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 200 OK in 56ms (Views: 11.6ms | ActiveRecord: 15.7ms | Allocations: 13418)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 202 Accepted in 84ms (Views: 1.5ms | ActiveRecord: 9.0ms | Allocations: 14499)
+
+
+Started POST "/search" for ::1 at 2021-03-03 16:53:06 -0800
+Processing by SearchesController#get_request as JSON
+  Parameters: {"name"=>"JagexAsh", "search"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 434ms (Views: 1.3ms | ActiveRecord: 3.7ms | Allocations: 3798)
+
+
+Started POST "/tweets" for ::1 at 2021-03-03 16:53:08 -0800
+  
+ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :primary_key, :foreign_key, :dependent, :validate, :inverse_of, :strict_loading, :autosave, :required, :touch, :polymorphic, :counter_cache, :optional, :default):
+  
+app/models/tweet.rb:3:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<main>'
+Started POST "/tweets" for ::1 at 2021-03-03 16:55:58 -0800
+Processing by TweetsController#create as JSON
+  Parameters: {"body"=>"@JackCampbell420 Not adequately, it wasn't. I do hope you enjoy RS3, though - happy gaming :)", "url"=>"https://twitter.com/JagexAsh/status/1367218557638111233", "jmod_id"=>"1", "tweet"=>{"body"=>"@JackCampbell420 Not adequately, it wasn't. I do hope you enjoy RS3, though - happy gaming :)", "url"=>"https://twitter.com/JagexAsh/status/1367218557638111233", "jmod_id"=>"1"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mJmod Load (4.3ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods" INNER JOIN "userjmods" ON "jmods"."id" = "userjmods"."jmod_id" WHERE "userjmods"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/controllers/tweets_controller.rb:9:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE Jmod Load (0.0ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods" INNER JOIN "userjmods" ON "jmods"."id" = "userjmods"."jmod_id" WHERE "userjmods"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/controllers/tweets_controller.rb:9:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mJmod Load (0.6ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods" INNER JOIN "userjmods" ON "jmods"."id" = "userjmods"."jmod_id" WHERE "userjmods"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ (byebug):1:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mUserjmod Load (23.0ms)[0m  [1m[34mSELECT "userjmods".* FROM "userjmods" WHERE "userjmods"."user_id" = $1 AND "userjmods"."jmod_id" = $2 LIMIT $3[0m  [["user_id", 1], ["jmod_id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+  [1m[36mJmod Load (0.4ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods" WHERE "jmods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:10:in `create'
+  [1m[36mCACHE Jmod Load (0.0ms)[0m  [1m[34mSELECT "jmods".* FROM "jmods" WHERE "jmods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:11:in `create'
+  [1m[36mTweet Create (10.7ms)[0m  [1m[32mINSERT INTO "tweets" ("body", "url", "jmod_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "@JackCampbell420 Not adequately, it wasn't. I do hope you enjoy RS3, though - happy gaming :)"], ["url", "https://twitter.com/JagexAsh/status/1367218557638111233"], ["jmod_id", 1], ["created_at", "2021-03-04 01:20:42.833812"], ["updated_at", "2021-03-04 01:20:42.833812"]]
+  ↳ app/controllers/tweets_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:11:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 1484403ms (Views: 1.2ms | ActiveRecord: 47.6ms | Allocations: 303677)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5831472875260309725)[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsertweets (20210304012300)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.7ms)[0m  [1m[35mCREATE TABLE "usertweets" ("id" bigserial primary key, "user_id" character varying, "tweet_id" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210304012300"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsercomments (20210304012314)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "usercomments" ("id" bigserial primary key, "user_id" character varying, "comment_id" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210304012314"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(5831472875260309725)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :usercomments
+  resources :usertweets
   resources :userjmods
   resources :comments
   resources :tweets

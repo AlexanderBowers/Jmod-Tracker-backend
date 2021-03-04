@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_02_011848) do
+ActiveRecord::Schema.define(version: 2021_03_04_012314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 2021_03_02_011848) do
     t.index ["jmod_id"], name: "index_tweets_on_jmod_id"
   end
 
+  create_table "usercomments", force: :cascade do |t|
+    t.string "user_id"
+    t.string "comment_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "userjmods", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "jmod_id", null: false
@@ -59,6 +66,13 @@ ActiveRecord::Schema.define(version: 2021_03_02_011848) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "usertweets", force: :cascade do |t|
+    t.string "user_id"
+    t.string "tweet_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
