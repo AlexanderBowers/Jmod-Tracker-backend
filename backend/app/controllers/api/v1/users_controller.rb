@@ -3,8 +3,8 @@ class Api::V1::UsersController < ApplicationController
   
     def profile
       user = current_user
+     
       render json: { user: UserSerializer.new(current_user)}, status: :accepted
-      
     end
   
     def create
@@ -16,8 +16,6 @@ class Api::V1::UsersController < ApplicationController
         render json: { error: 'failed to create user' }, status: :not_acceptable
       end
     end
-    
-
   
     private
   

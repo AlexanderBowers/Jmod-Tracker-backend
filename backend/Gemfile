@@ -49,4 +49,4 @@ gem "fake", "~> 1.42"
 
 gem "httparty"
 
-
+gem "pry"
