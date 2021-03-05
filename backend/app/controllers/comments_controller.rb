@@ -17,12 +17,12 @@ class CommentsController < ApplicationController
             Userjmod.create(user_id: user, jmod_id: jmod)
          end
 
-        Comment.find_by(body: params[:body], url: params[:url], jmod_id: jmod) ?
+        Comment.find_by(body: params[:body], permalink: params[:permalink], jmod_id: jmod) ?
             (comment = Comment.find_by(body: params[:body], url: params[:url], jmod_id: jmod)
             Usercomment.find_by(user_id: user, comment_id: comment.id) ?
                 response = {error: 'pin exists'} :
                 Usercomment.create(user_id: user, comment_id: comment.id) && response = {success: "Pin created"}) :
-           (comment = Comment.create(body: params[:body], url: params[:url], jmod_id: jmod)
+           (comment = Comment.create(body: params[:body], permalink: params[:permalink], jmod_id: jmod)
             Usercomment.create(user_id: user, comment_id: comment.id) && response = {success: "Pin created"})
         render json: response
     end
