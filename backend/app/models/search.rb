@@ -52,15 +52,15 @@ class Search < ApplicationRecord
         end
         sock.verify_mode = OpenSSL::SSL::VERIFY_NONE
         res = sock.start {|http| http.request(req) }
-        results_obj = JSON.parse(res.body)
-       
+        res.body ? results_obj = JSON.parse(res.body) : {error: 'not found'}
     end
 
     def self.get_reddit(name)
+        
         headers = {
            "User-Agent" => "student project by /u/fuzzy_nugget"  
         }
         response = HTTParty.get("https://reddit.com/user/#{name}/comments.json", :headers => headers)
-        response.body
+        response.body ? response.body : {error: response.message}
     end
 end

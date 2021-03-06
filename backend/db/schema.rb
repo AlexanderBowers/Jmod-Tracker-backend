@@ -25,8 +25,6 @@ ActiveRecord::Schema.define(version: 2021_03_04_012314) do
   create_table "jmods", force: :cascade do |t|
     t.string "name"
     t.string "twitter_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "searches", force: :cascade do |t|
