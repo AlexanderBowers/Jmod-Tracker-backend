@@ -29,7 +29,12 @@ class TweetsController < ApplicationController
     end
 
     def destroy
-
+        #for presentation, just destroy tweet.
+        #after graduation, change so it just destroys Usertweet.
+        
+        tweet = Tweet.find_by(id: params["id"])
+        tweet.destroy()
+        render json: {message: 'tweet destroyed'}
     end
 
 end

@@ -28,7 +28,12 @@ class CommentsController < ApplicationController
     end
 
     def destroy
-
+        #for presentation, just destroy comment.
+        #after graduation, change so it just destroys Usercomment.
+        
+        comment = Comment.find_by(id: params["id"])
+        comment.destroy()
+        render json: {message: 'comment destroyed'}
     end
 
 end
