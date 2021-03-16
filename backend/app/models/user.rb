@@ -59,6 +59,31 @@ class User < ApplicationRecord
         comments
     end
 
+    #checks the feed against a user's saved feed
+    #to see if there are updates
+    @feed = []
+
+    def get_feed
+        new_feed = {}
+        Jmod.all.map do |j|
+            #for each jmod, search twitter
+            #for all their tweets & comments, save into @feed[j: {twitter: [], reddit:[]}]
+            id = Search.get_id(j.name)
+            twitter = Search.get_tweets(id["data"][0]["id"])
+            new_feed[j.name][:twitter] = twitter
+
+            reddit = Search.get_reddit(jmod.name)
+            new_feed[j.name[:reddit] = reddit
+        end
+
+
+            @feed[j.name[:twitter]].push (json: request)
+
+
+
+
+    end
+
 
     
 
