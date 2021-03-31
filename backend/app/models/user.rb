@@ -73,15 +73,9 @@ class User < ApplicationRecord
             new_feed[j.name][:twitter] = twitter
 
             reddit = Search.get_reddit(jmod.name)
-            new_feed[j.name[:reddit] = reddit
+            new_feed[j.name[:reddit]] = reddit
         end
-
-
-            @feed[j.name[:twitter]].push (json: request)
-
-
-
-
+            @feed[j.name[:twitter]].push(json: request)
     end
 
 
