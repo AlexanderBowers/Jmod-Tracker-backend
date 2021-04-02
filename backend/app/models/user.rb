@@ -1,4 +1,5 @@
 require 'pry'
+require 'json'
 class User < ApplicationRecord
     has_secure_password
     validates :username, uniqueness: true
@@ -59,26 +60,33 @@ class User < ApplicationRecord
         comments
     end
 
+    # //response comes out as
+    # //{data: {children: [{data: {body: text, permalink: text}}, {}, {}]}}
+    # //to generate link to comment:
+    # //https://reddit.com/${permalink}
+    # //if user isn't found, response is {message: "Not Found"}
+
     #checks the feed against a user's saved feed
     #to see if there are updates
-    @feed = []
+    @feed = {}
 
     def get_feed
         new_feed = {}
         Jmod.all.map do |j|
+            new_feed[j.name] = {twitter: [], reddit: []}
             #for each jmod, search twitter
             #for all their tweets & comments, save into @feed[j: {twitter: [], reddit:[]}]
             id = Search.get_id(j.name)
+            
             twitter = Search.get_tweets(id["data"][0]["id"])
-            new_feed[j.name][:twitter] = twitter
+            new_feed[j.name][:twitter] = twitter["data"].first
+            
 
-            reddit = Search.get_reddit(jmod.name)
-            new_feed[j.name[:reddit]] = reddit
+            reddit = Search.get_reddit(j.name)
+            reddit_json = JSON.parse(reddit)
+            new_feed[j.name][:reddit] = reddit
+            byebug
         end
-            @feed[j.name[:twitter]].push(json: request)
+            @feed = new_feed
     end
-
-
-    
-
 end
