@@ -5,9 +5,7 @@ class Api::V1::UsersController < ApplicationController
       user = current_user
       tweets = user.get_tweets
       comments = user.get_comments
-      feed = user.get_feed
-     
-      render json: { user: UserSerializer.new(current_user), tweets: tweets, comments: comments, feed: feed}, status: :accepted
+      render json: { user: UserSerializer.new(current_user), tweets: tweets, comments: comments}, status: :accepted
     end
   
     def create
@@ -18,6 +16,12 @@ class Api::V1::UsersController < ApplicationController
       else
         render json: { error: 'failed to create user' }, status: :not_acceptable
       end
+    end
+
+    def set_feed
+      user = current_user
+      feed = user.set_feed
+      render json: feed
     end
   
     private

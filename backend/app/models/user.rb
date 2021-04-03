@@ -1,6 +1,10 @@
 require 'pry'
 require 'json'
 class User < ApplicationRecord
+
+    def initialize(feed = {})
+        @feed = feed
+    end
     attr_accessor :feed
 
     has_secure_password
@@ -9,30 +13,6 @@ class User < ApplicationRecord
     has_many :jmods, through: :userjmods
     has_many :tweets, through: :jmods
     has_many :comments, through: :jmods
-    has_many :usertweets
-    has_many :usercomments
-    # has_many :tweets, through: :usertweets
-    # has_many :comments, through: :usercomments
-
-    # def get_tweets
-    #     tweets = []
-    #     if self.usertweets
-    #         self.usertweets.map do |ut|
-    #             tweets.push(ut.tweet)
-    #         end
-    #     end
-    #     tweets
-    # end
-
-    # def get_comments
-    #     comments = []
-    #     if self.usercomments
-    #         self.usercomments.map do |uc|
-    #             comments.push(uc.comment)
-    #         end
-    #     end
-    #     comments
-    # end
 
     def get_tweets
         tweets = []
@@ -79,29 +59,36 @@ class User < ApplicationRecord
             #this is grabbing the most recent comment's id and assigning it to that jmod's reddit key.
             reddit = Search.get_reddit(j.name)
             reddit_json = JSON.parse(reddit)
-            new_feed[j.name][:reddit] = reddit_json["data"]["children"][0]["data"]["id"]
-            check_feed(new_feed) 
+            new_feed[j.name][:reddit] = reddit_json["data"]["children"][0]["data"]["id"] 
         end
-
-            
+        check_feed(new_feed)
     end
 
     def check_feed(new_feed)
         differences = []
+        byebug
         if @feed == new_feed 
-            difference_string = "there are no new updates"
+            differences
         else
-            new_feed.map do |j|
-                if j[:twitter] != @feed[j][:twitter] && j[:reddit] != @feed[j][:reddit]
-                    differences.push("#{j}'s twitter and reddit")
-                elsif j[:twitter] != @feed[j][:twitter]
-                    differences.push("#{j}'s twitter")
-                elsif j[:reddit] != @feed[j][:reddit]
-                    differences.push("#{j}'s twitter")
+            if @feed != nil
+                #map through jmods. if it is different than the user's feed, push it to differences.
+                new_feed.map do |j|
+                    if j[:twitter] != @feed[j][:twitter] && j[:reddit] != @feed[j][:reddit]
+                        differences.push("#{j}'s twitter and reddit")
+                    elsif j[:twitter] != @feed[j][:twitter]
+                        differences.push("#{j}'s twitter")
+                    elsif j[:reddit] != @feed[j][:reddit]
+                        differences.push("#{j}'s twitter")
+                    end
                 end
+            else
+                self.feed = new_feed
+                differences = new_feed
             end
-            difference_string = "there are updates in #{differences}"
+            self.feed = new_feed
+            differences
         end
+        differences
     end
 
 end
