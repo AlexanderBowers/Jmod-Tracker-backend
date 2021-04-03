@@ -11,12 +11,12 @@ Rails.application.routes.draw do
 
   post '/search', to: 'searches#get_request'
   post '/reddit', to: 'searches#get_reddit'
+  post '/feed', to: 'searches#set_feed'
   namespace :api do
     namespace :v1 do
       resources :users, only: [:create]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
-      get '/feed', to: 'users#set_feed'
     end
   end
 end

@@ -1,14 +1,9 @@
 require 'pry'
 require 'json'
 class User < ApplicationRecord
-
-    def initialize(feed = {})
-        @feed = feed
-    end
-    attr_accessor :feed
-
     has_secure_password
     validates :username, uniqueness: true
+
     has_many :userjmods
     has_many :jmods, through: :userjmods
     has_many :tweets, through: :jmods
@@ -46,7 +41,7 @@ class User < ApplicationRecord
 
     #checks the feed against a user's current feed, then sets the new feed, and returns the difference. 
     #for each jmod, search twitter & reddit. save their most recent tweet and comment id
-    def set_feed
+    def set_feed(old_feed)
         new_feed = {}
         Jmod.all.map do |j|
             new_feed[j.name] = {twitter: [], reddit: []}
@@ -61,31 +56,26 @@ class User < ApplicationRecord
             reddit_json = JSON.parse(reddit)
             new_feed[j.name][:reddit] = reddit_json["data"]["children"][0]["data"]["id"] 
         end
-        check_feed(new_feed)
+        new_feed
     end
 
-    def check_feed(new_feed)
-        differences = []
+    def check_feed(new_feed, old_feed)
+        differences = {new_feed: new_feed, updates: []}
+        old_feed = JSON.parse(old_feed)
         byebug
-        if @feed == new_feed 
-            differences
+        if old_feed == new_feed 
+            differences[:updates] = "there are no new updates"
         else
-            if @feed != nil
-                #map through jmods. if it is different than the user's feed, push it to differences.
-                new_feed.map do |j|
-                    if j[:twitter] != @feed[j][:twitter] && j[:reddit] != @feed[j][:reddit]
-                        differences.push("#{j}'s twitter and reddit")
-                    elsif j[:twitter] != @feed[j][:twitter]
-                        differences.push("#{j}'s twitter")
-                    elsif j[:reddit] != @feed[j][:reddit]
-                        differences.push("#{j}'s twitter")
-                    end
+            #map through jmods in new_feed. if it is different than the user's old_feed, push it to differences.
+            new_feed.map do |j|
+                if j[:twitter] != old_feed[j][:twitter] && j[:reddit] != old_feed[j][:reddit]
+                    differences[:updates].push("#{j}'s twitter and reddit")
+                elsif j[:twitter] != old_feed[j][:twitter]
+                    differences[:updates].push("#{j}'s twitter")
+                elsif j[:reddit] != old_feed[j][:reddit]
+                    differences[:updates].push("#{j}'s twitter")
                 end
-            else
-                self.feed = new_feed
-                differences = new_feed
             end
-            self.feed = new_feed
             differences
         end
         differences

@@ -11,6 +11,7 @@ class Api::V1::UsersController < ApplicationController
     def create
       @user = User.create(user_params)
       if @user.valid?
+        # @user.save
         @token = encode_token({ user_id: @user.id })
         render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
       else
@@ -18,15 +19,11 @@ class Api::V1::UsersController < ApplicationController
       end
     end
 
-    def set_feed
-      user = current_user
-      feed = user.set_feed
-      render json: feed
-    end
+    
   
     private
   
     def user_params
-      params.require(:user).permit(:username, :password)
+      params.require(:user).permit(:username, :password, :old_feed)
     end
   end
