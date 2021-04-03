@@ -54,31 +54,35 @@ class User < ApplicationRecord
             #this is grabbing the most recent comment's id and assigning it to that jmod's reddit key.
             reddit = Search.get_reddit(j.name)
             reddit_json = JSON.parse(reddit)
-            new_feed[j.name][:reddit] = reddit_json["data"]["children"][0]["data"]["id"] 
+            if reddit_json["data"]
+                if reddit_json["data"]["children"].length > 0
+                    new_feed[j.name][:reddit] = reddit_json["data"]["children"][0]["data"]["id"]
+                end
+            end 
         end
         new_feed
     end
 
-    def check_feed(new_feed, old_feed)
-        differences = {new_feed: new_feed, updates: []}
-        old_feed = JSON.parse(old_feed)
-        byebug
-        if old_feed == new_feed 
-            differences[:updates] = "there are no new updates"
-        else
-            #map through jmods in new_feed. if it is different than the user's old_feed, push it to differences.
-            new_feed.map do |j|
-                if j[:twitter] != old_feed[j][:twitter] && j[:reddit] != old_feed[j][:reddit]
-                    differences[:updates].push("#{j}'s twitter and reddit")
-                elsif j[:twitter] != old_feed[j][:twitter]
-                    differences[:updates].push("#{j}'s twitter")
-                elsif j[:reddit] != old_feed[j][:reddit]
-                    differences[:updates].push("#{j}'s twitter")
-                end
-            end
-            differences
-        end
-        differences
-    end
+    # def check_feed(new_feed, old_feed)
+    #     differences = {new_feed: new_feed, updates: []}
+    #     old_feed = JSON.parse(old_feed)
+    #     byebug
+    #     if old_feed == new_feed 
+    #         differences[:updates] = "there are no new updates"
+    #     else
+    #         #map through jmods in new_feed. if it is different than the user's old_feed, push it to differences.
+    #         new_feed.map do |j|
+    #             if j[:twitter] != old_feed[j][:twitter] && j[:reddit] != old_feed[j][:reddit]
+    #                 differences[:updates].push("#{j}'s twitter and reddit")
+    #             elsif j[:twitter] != old_feed[j][:twitter]
+    #                 differences[:updates].push("#{j}'s twitter")
+    #             elsif j[:reddit] != old_feed[j][:reddit]
+    #                 differences[:updates].push("#{j}'s twitter")
+    #             end
+    #         end
+    #         differences
+    #     end
+    #     differences
+    # end
 
 end
