@@ -54,7 +54,7 @@ class User < ApplicationRecord
             #this is grabbing the most recent comment's id and assigning it to that jmod's reddit key.
             reddit = Search.get_reddit(j.name)
             reddit_json = JSON.parse(reddit)
-            if reddit_json["data"]
+            if reddit_json["data"] != nil
                 if reddit_json["data"]["children"].length > 0
                     new_feed[j.name][:reddit] = reddit_json["data"]["children"][0]["data"]["id"]
                 end
