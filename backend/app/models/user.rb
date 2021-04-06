@@ -41,9 +41,9 @@ class User < ApplicationRecord
 
     #checks the feed against a user's current feed, then sets the new feed, and returns the difference. 
     #for each jmod, search twitter & reddit. save their most recent tweet and comment id
-    def set_feed(old_feed)
+    def set_feed(old_feed, jmods)
         new_feed = {}
-        Jmod.all.map do |j|
+        jmods do |j|
             new_feed[j.name] = {twitter: [], reddit: []}
             id = Search.get_id(j.name)
             #this is just grabbing the jmod's most recent tweet id and setting it as value to twitter key.
