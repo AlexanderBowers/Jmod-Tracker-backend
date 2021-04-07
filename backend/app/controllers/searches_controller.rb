@@ -13,7 +13,6 @@ class SearchesController < ApplicationController
 
     def set_feed
         user = current_user
-        byebug
         jmods = JSON.parse(params[:jmods])
         feed = user.set_feed(jmods)
         render json: feed
