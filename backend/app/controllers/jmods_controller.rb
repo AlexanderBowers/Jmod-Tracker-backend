@@ -1,7 +1,10 @@
 class JmodsController < ApplicationController
 
     def index
-        jmods = Jmod.all 
+        jmods = []
+        Jmod.all.map do |j|
+            jmods.push(j.name)
+        end 
         render json: jmods
     end
 
