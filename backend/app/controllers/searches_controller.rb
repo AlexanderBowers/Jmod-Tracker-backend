@@ -13,7 +13,8 @@ class SearchesController < ApplicationController
 
     def set_feed
         user = current_user
-        feed = user.set_feed(params[:old_feed], params[:jmods])
+        jmods = JSON.parse(params[:jmods])
+        feed = user.set_feed(jmods)
         render json: feed
     end
         
