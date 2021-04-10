@@ -2,8 +2,6 @@ class SearchesController < ApplicationController
 
     def get_request
         id = Search.get_id(params[:name])
-        puts params[:name]
-        puts 'id is' + JSON.parse(id).to_s
         request = Search.get_tweets(id["data"][0]["id"])
         render json: request
     end 
