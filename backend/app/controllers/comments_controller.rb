@@ -12,17 +12,18 @@ class CommentsController < ApplicationController
         #if it does, check if Usercomment exists. If it does, return error. If it doesn't, create new Usercomment.
         #if it doesn't, create comment then create new Usercomment.
         user = current_user.id
-        jmod = params[:jmod_id]
-         if Userjmod.find_by(user_id: user, jmod_id: jmod) == nil
-            Userjmod.create(user_id: user, jmod_id: jmod)
+        byebugoa
+        jmod = Jmod.find_by(name: params[:jmod])
+         if Userjmod.find_by(user_id: user, jmod_id: jmod.id) == nil
+            Userjmod.create(user_id: user, jmod_id: jmod.id)
          end
 
-        Comment.find_by(body: params[:body], permalink: params[:permalink], jmod_id: jmod) ?
-            (comment = Comment.find_by(body: params[:body], url: params[:url], jmod_id: jmod)
+        Comment.find_by(body: params[:body], permalink: params[:permalink], jmod_id: jmod.id) ?
+            (comment = Comment.find_by(body: params[:body], url: params[:url], jmod_id: jmod.id)
             Usercomment.find_by(user_id: user, comment_id: comment.id) ?
                 response = {error: 'pin exists'} :
                 Usercomment.create(user_id: user, comment_id: comment.id) && response = {success: "Pin created"}) :
-           (comment = Comment.create(body: params[:body], permalink: params[:permalink], jmod_id: jmod)
+           (comment = Comment.create(body: params[:body], permalink: params[:permalink], jmod_id: jmod.id)
             Usercomment.create(user_id: user, comment_id: comment.id) && response = {success: "Pin created"})
         render json: response
     end
