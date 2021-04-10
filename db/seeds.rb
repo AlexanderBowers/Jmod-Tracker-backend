@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+    Jmod.create([{name: "JagexAsh"}, {name: "JagexZuko"}, {name: "JagexRamen"}, {name: "JagexPi"}, {name: "JagexShogun"}, {name: "JagexKari"}])

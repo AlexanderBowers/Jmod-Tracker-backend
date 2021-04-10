@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 2021_03_04_012314) do
 
   create_table "jmods", force: :cascade do |t|
     t.string "name"
-    t.string "twitter_id"
   end
 
   create_table "searches", force: :cascade do |t|
